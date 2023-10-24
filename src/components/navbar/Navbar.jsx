@@ -1,10 +1,9 @@
-import { Link } from "react-router-dom";
 import {
-  NavLink,
+  LogoContainer,
   NavLinks,
   NavbarContainer,
-  LogoContainer,
-} from "../homePage/homePage.styles";
+  NavLink,
+} from "./navbar.styles";
 
 function Navbar() {
   return (
