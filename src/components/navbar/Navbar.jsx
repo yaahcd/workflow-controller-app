@@ -1,3 +1,4 @@
+import { Outlet } from "react-router-dom";
 import {
   LogoContainer,
   NavLinks,
@@ -11,11 +12,12 @@ function Navbar() {
       <NavbarContainer>
         <LogoContainer></LogoContainer>
         <NavLinks>
-          <NavLink to="">Employees</NavLink>
+          <NavLink to="employees">Employees</NavLink>
           <NavLink to="">Jobs</NavLink>
           <NavLink to="">Map</NavLink>
         </NavLinks>
       </NavbarContainer>
+      <Outlet/>
     </>
   );
 }

@@ -1,11 +1,13 @@
 import Navbar from "../navbar/Navbar"
+import { HomePageContainer } from "./homePage.styles"
 
 
 function HomePage() {
   return (
-    <div>
-      <Navbar/>
-    </div>
+    <HomePageContainer>
+      {/* <Navbar/> */}
+      <h1>HELLO</h1>
+    </HomePageContainer>
   )
 }
 
