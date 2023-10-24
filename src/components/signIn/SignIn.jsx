@@ -4,10 +4,11 @@ import {
   InputContainer,
   SignInButton,
 } from "./signIn.styles";
+import { Outlet } from "react-router-dom";
 
 function SignIn() {
   return (
-    <div>
+    <>
       <SignInHeader>Workflow Management Application</SignInHeader>
       <SignInForm action="">
         <h3>Welcome</h3>
@@ -21,7 +22,8 @@ function SignIn() {
         </InputContainer>
         <SignInButton>Sign in</SignInButton>
       </SignInForm>
-    </div>
+      <Outlet />
+    </>
   );
 }
 

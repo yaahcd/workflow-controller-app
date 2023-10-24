@@ -1,12 +1,24 @@
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
+import {
+  NavLink,
+  NavLinks,
+  NavbarContainer,
+  LogoContainer,
+} from "../homePage/homePage.styles";
+
 function Navbar() {
   return (
-    <div>
-      <Link to=''>
-      Employees
-      </Link>
-    </div>
-  )
+    <>
+      <NavbarContainer>
+        <LogoContainer></LogoContainer>
+        <NavLinks>
+          <NavLink to="">Employees</NavLink>
+          <NavLink to="">Jobs</NavLink>
+          <NavLink to="">Map</NavLink>
+        </NavLinks>
+      </NavbarContainer>
+    </>
+  );
 }
 
-export default Navbar
+export default Navbar;
