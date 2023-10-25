@@ -7,6 +7,9 @@ function EmployeesList() {
 
   return (
       <EmployeesListContainer>
+        <h3>List of Employees</h3>
+        <input type="search" 
+        placeholder="search for employee"/>
         {employees.map((employee, index) => (
           <p key={index} onClick={() => navigate(`${employee.id}`)}>
             {employee.name}

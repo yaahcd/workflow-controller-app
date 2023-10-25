@@ -3,8 +3,8 @@ import SignIn from "./components/signIn/SignIn"
 import HomePage from "./components/homePage/HomePage"
 import Navbar from './components/navbar/Navbar'
 import EmployeesList from "./components/employeesList/EmployeesList"
-import './App.css'
 import SingleEmployee from "./components/singleEmployee/SingleEmployee"
+import './App.css'
 
 function App() {
 
