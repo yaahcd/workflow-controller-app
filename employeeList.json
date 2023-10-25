@@ -1,0 +1,54 @@
+{
+  "employees": [
+    {
+      "id": "123456",
+      "name": "John Doe",
+      "phone_number": "123456789",
+      "address": "Test Avenue, 12345",
+      "jobs_assigned": [
+         {
+          "job_name": "Millers",
+          "address": "Testing road, 8795",
+          "plots": {
+            "1254": ["second floor"],
+            "1256": ["first floor", "roof", "garage roof"]
+          }
+        },
+        {
+          "job_name":"Williams",
+          "address": "Testing road, 8795",
+          "plots": {
+            "687": ["second floor"],
+            "587": ["first floor", "roof", "garage roof"],
+            "578": ["second floor"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "123789",
+      "name": "Jane Doe",
+      "phone_number": "123456789",
+      "address": "Test Avenue, 12345",
+      "jobs_assigned": [
+        {
+         "job_name": "Millers",
+         "address": "Testing road, 8795",
+         "plots": {
+           "1254": ["second floor"],
+           "1256": ["first floor", "roof", "garage roof"]
+         }
+       },
+       {
+         "job_name":"Williams",
+         "address": "Testing road, 8795",
+         "plots": {
+           "687": ["second floor"],
+           "587": ["first floor", "roof", "garage roof"],
+           "578": ["second floor"]
+         }
+       }
+     ]
+    }
+  ]
+}

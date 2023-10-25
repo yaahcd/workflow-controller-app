@@ -1,21 +1,19 @@
-import { EmployeesListContainer } from "./employeesList.styles"
-
-const list = [
-  "John Doe",
-  "Jane Done", 
-  "test001",
-  "test002"
-]
+import { EmployeesListContainer } from "./employeesList.styles";
+import { useNavigate } from "react-router-dom";
+import { employees } from "../../../employeeList.json";
 
 function EmployeesList() {
+  const navigate = useNavigate();
 
   return (
-    <EmployeesListContainer>
-      {list.map((employee) => (
-        <p>{employee}</p>
+      <EmployeesListContainer>
+        {employees.map((employee, index) => (
+          <p key={index} onClick={() => navigate(`${employee.id}`)}>
+            {employee.name}
+          </p>
         ))}
-    </EmployeesListContainer>
-  )
+      </EmployeesListContainer>
+  );
 }
 
-export default EmployeesList
+export default EmployeesList;
