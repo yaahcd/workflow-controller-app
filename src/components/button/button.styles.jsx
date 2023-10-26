@@ -9,7 +9,7 @@ export const BaseButton = styled.button`
   padding: 0 35px 0 35px;
   font-size: 15px;
   background-color: black;
-  color: white;
+  color: #F8F9FA;
   text-transform: uppercase;
   font-family: "Encode Sans Condensed", sans-serif;
   font-weight: bolder;
@@ -20,14 +20,14 @@ export const BaseButton = styled.button`
   align-items: center;
 
   &:hover {
-    background-color: white;
+    background-color: #F8F9FA;
     color: black;
     border: 1px solid black;
   }
 `;
 
 export const AddButton = styled(BaseButton)`
-height: 30px;
-border-radius: 10px;
-padding: 0 15px;
-`
+  height: 30px;
+  border-radius: 10px;
+  padding: 0 15px;
+`;
