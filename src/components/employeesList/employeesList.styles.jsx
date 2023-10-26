@@ -17,7 +17,6 @@ h3 {
     font-family: 'Kite One';
     font-size: 30px;
     margin: 20px;
-
 }
 
 p {
