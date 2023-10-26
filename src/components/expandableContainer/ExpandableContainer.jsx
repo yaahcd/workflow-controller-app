@@ -5,8 +5,6 @@ import { useState } from "react";
 function ExpandableContainer({ mainBtn, title, children }) {
   const [isClicked, setIsClicked] = useState(false);
 
-  console.log(title);
-
   const handleClick = () => {
     setIsClicked((current) => {
       return !current;

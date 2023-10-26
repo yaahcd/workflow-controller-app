@@ -1,17 +1,24 @@
+import { useState } from "react";
+import { useParams } from "react-router-dom";
 import {
   JobDetailsContainer,
   JobDetails,
   PlotsContainer,
 } from "./singleJob.styles";
 import ExpandableContainer from "../expandableContainer/ExpandableContainer";
+import Button, { BUTTON_TYPE_CLASSES } from "../button/Button";
 import { jobs } from "../../../jobList.json";
-import { useParams } from "react-router-dom";
+import AssignJob from "../assignJob/AssignJob";
 
 function SingleJob() {
   const { job } = useParams();
+  const [assignJob, setAssignJob] = useState(false);
+  const [assignJobClicked, setAssignJobClicked] = useState(false)
   const jobDetails = jobs.filter((singleJob) => singleJob.job_code === job);
 
-  console.log(jobDetails);
+    const handleAssignJob = () => {
+        setAssignJob(!assignJob)
+    }
 
   return (
     <JobDetailsContainer>
@@ -24,13 +31,13 @@ function SingleJob() {
           <span>Address:</span>{" "}
           {`${jobDetails[0].address.line01}, ${jobDetails[0].address.city} - ${jobDetails[0].address.postcode} `}
         </p>
-        <p></p>
+        <p>*adicionar total geral, total charged*</p>
       </JobDetails>
       <PlotsContainer>
         <h3>Plots</h3>
         {Object.keys(jobDetails[0].plots[0]).map((key, index) => {
           return (
-            <ExpandableContainer title={key} mainBtn={true}>
+            <ExpandableContainer title={key} mainBtn={true} key={index}>
               <p>
                 <span>Total price:</span> £{" "}
                 {jobDetails[0].plots[0][key].total_price}
@@ -48,7 +55,7 @@ function SingleJob() {
                   <p>
                     <span>Employees:</span>
                     {jobDetails[0].plots[0][key].first_floor.employees.length
-                      ? "" + jobDetails[0].plots[0][key].first_floor.employees
+                      ? " " + jobDetails[0].plots[0][key].first_floor.employees
                       : " No employee assigned"}
                   </p>
                   <p>
@@ -69,7 +76,7 @@ function SingleJob() {
                   <p>
                     <span>Employees:</span>
                     {jobDetails[0].plots[0][key].second_floor.employees.length
-                      ? "" + jobDetails[0].plots[0][key].second_floor.employees
+                      ? " " + jobDetails[0].plots[0][key].second_floor.employees
                       : " No employee assigned"}
                   </p>
                   <p>
@@ -90,7 +97,7 @@ function SingleJob() {
                   <p>
                     <span>Employees:</span>
                     {jobDetails[0].plots[0][key].studs.employees.length
-                      ? "" + jobDetails[0].plots[0][key].studs.employees
+                      ? " " + jobDetails[0].plots[0][key].studs.employees
                       : " No employee assigned"}
                   </p>
                   <p>
@@ -111,7 +118,7 @@ function SingleJob() {
                   <p>
                     <span>Employees:</span>
                     {jobDetails[0].plots[0][key].garage.employees.length
-                      ? "" + jobDetails[0].plots[0][key].garage.employees
+                      ? " " + jobDetails[0].plots[0][key].garage.employees
                       : " No employee assigned"}
                   </p>
                   <p>
@@ -132,7 +139,7 @@ function SingleJob() {
                   <p>
                     <span>Employees: </span>
                     {jobDetails[0].plots[0][key].roof.employees.length
-                      ? "" + jobDetails[0].plots[0][key].roof.employees
+                      ? " " + jobDetails[0].plots[0][key].roof.employees
                       : " No employee assigned"}
                   </p>
                   <p>
@@ -143,10 +150,12 @@ function SingleJob() {
                   </p>
                 </ExpandableContainer>
               )}
+              <Button buttonType={BUTTON_TYPE_CLASSES.add} onClick={() => setAssignJobClicked(true)}>Assign Employee</Button>
             </ExpandableContainer>
           );
         })}
       </PlotsContainer>
+      {assignJobClicked && <AssignJob handleAssignJob={handleAssignJob}/>}
     </JobDetailsContainer>
   );
 }
