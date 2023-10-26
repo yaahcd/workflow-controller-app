@@ -1,12 +1,12 @@
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import SearchBox from "../searchBox/SearchBox";
+import Button, { BUTTON_TYPE_CLASSES } from "../button/Button";
 import {
   ButtonContainer,
   EmployeesListContainer,
 } from "./employeesList.styles";
-import { useNavigate } from "react-router-dom";
 import { employees } from "../../../employeeList.json";
-import SearchBox from "../searchBox/SearchBox";
-import Button, { BUTTON_TYPE_CLASSES } from "../button/Button";
-import { useEffect, useState } from "react";
 
 function EmployeesList() {
   const navigate = useNavigate();

@@ -1,0 +1,191 @@
+{
+  "jobs": [
+    {
+      "id": "123",
+      "job_code": "7894",
+      "name": "Millers",
+      "address": {
+        "line01": "Test Street, 1454",
+        "line02": "",
+        "postcode": "HH52 8EF",
+        "city": "London",
+        "country": "UK"
+      },
+      "plots": [
+        {
+          "1254": {
+            "total_price": "15000",
+            "first_floor": {
+              "price": "356",
+              "employees": [],
+              "finished": false
+            },
+            "second_floor": {
+              "price": "356",
+              "employees": ["John Doe"],
+              "finished": true
+            },
+            "studs": {
+              "price": "852",
+              "employees": [],
+              "finished": false
+            },
+            "stair": {
+              "price": "100",
+              "employees": [],
+              "finished": false
+            },
+            "roof": {
+              "price": "1500",
+              "employees": [],
+              "finished": false
+            },
+            "garage": false
+          },
+          "1256": {
+            "total_price": "11000",
+            "first_floor": {
+              "price": "356",
+              "employees": ["John Doe"],
+              "finished": false
+            },
+            "second_floor": false,
+            "studs": {
+              "price": "852",
+              "employees": [],
+              "finished": false
+            },
+            "stair": {
+              "price": "100",
+              "employees": [],
+              "finished": false
+            },
+            "roof": {
+              "price": "1500",
+              "employees": ["John Doe"],
+              "finished": true
+            },
+            "garage": {
+              "price": "500",
+              "employees": [],
+              "finished": false,
+              "roof": {
+                "price": "700",
+                "employees": ["John Doe"],
+                "finished": true
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "124",
+      "job_code": "78554",
+      "name": "Williams",
+      "address": {
+        "line01": "Testing Av, 875",
+        "line02": "",
+        "postcode": "LO87 8EF",
+        "city": "Leeds",
+        "country": "UK"
+      },
+      "plots": [
+        {
+          "687": {
+            "total_price": "9000",
+            "first_floor": {
+              "price": "356",
+              "employees": [],
+              "finished": false
+            },
+            "second_floor": {
+              "price": "356",
+              "employees": ["Jane Doe"],
+              "finished": true
+            },
+            "studs": {
+              "price": "852",
+              "employees": [],
+              "finished": false
+            },
+            "stair": {
+              "price": "100",
+              "employees": [],
+              "finished": false
+            },
+            "roof": {
+              "price": "1500",
+              "employees": [],
+              "finished": false
+            },
+            "garage": false
+          },
+          "587": {
+            "total_price": "11000",
+            "first_floor": {
+              "price": "356",
+              "employees": ["Jane Doe"],
+              "finished": false
+            },
+            "second_floor": false,
+            "studs": {
+              "price": "852",
+              "employees": [],
+              "finished": false
+            },
+            "stair": {
+              "price": "100",
+              "employees": [],
+              "finished": false
+            },
+            "roof": {
+              "price": "1500",
+              "employees": ["Jane Doe"],
+              "finished": true
+            },
+            "garage": {
+              "price": "500",
+              "employees": [],
+              "finished": false,
+              "roof": {
+                "price": "700",
+                "employees": ["Jane Doe"],
+                "finished": true
+              }
+            }
+          },
+          "578": {
+            "total_price": "9000",
+            "first_floor": {
+              "price": "356",
+              "employees": [],
+              "finished": false
+            },
+            "second_floor": {
+              "price": "356",
+              "employees": ["Jane Doe"],
+              "finished": true
+            },
+            "studs": {
+              "price": "852",
+              "employees": [],
+              "finished": false
+            },
+            "stair": {
+              "price": "100",
+              "employees": [],
+              "finished": false
+            },
+            "roof": {
+              "price": "1500",
+              "employees": [],
+              "finished": false
+            },
+            "garage": false
+          }
+        }
+      ]
+    }
+  ]
+}

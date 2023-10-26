@@ -6,6 +6,7 @@ import EmployeesList from "./components/employeesList/EmployeesList"
 import SingleEmployee from "./components/singleEmployee/SingleEmployee"
 import './App.css'
 import JobList from "./components/jobList/JobList"
+import SingleJob from "./components/singleJob/SingleJob"
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
         <Route path="employees" element={<EmployeesList />}/>
         <Route path="employees/:employee" element={<SingleEmployee />}/>
         <Route path="jobs" element={<JobList/>}/>
+        <Route path="jobs/:job" element={<SingleJob/>}/>
       </Route>
     </Routes>
   )

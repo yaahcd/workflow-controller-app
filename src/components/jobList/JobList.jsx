@@ -1,9 +1,15 @@
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Button, { BUTTON_TYPE_CLASSES } from "../button/Button";
-import { ButtonContainer } from "../employeesList/employeesList.styles";
 import SearchBox from "../searchBox/SearchBox";
+import { ButtonContainer } from "../employeesList/employeesList.styles";
 import { JobListContainer, SingleJobContainer } from "./jobList.styles";
+import { jobs } from "../../../jobList.json";
 
 function JobList() {
+  const navigate = useNavigate();
+  const [jobList, setJobList] = useState(jobs);
+
   return (
     <JobListContainer>
       <ButtonContainer>
@@ -14,17 +20,19 @@ function JobList() {
         placeholder={"search for job"}
         onChangeHandler={"onSearchChange"}
       />
-      <SingleJobContainer>
-        <p>
-          <span>Code:</span> 5874
-        </p>
-        <p>
-          <span>Name:</span> Millers
-        </p>
-        <p>
-          <span>Location:</span> Bursledon
-        </p>
-      </SingleJobContainer>
+      {jobList.map((job) => (
+        <SingleJobContainer onClick={() => navigate(`${job.job_code}`)}>
+          <p>
+            <span>Code:</span> {job.job_code}
+          </p>
+          <p>
+            <span>Name:</span> {job.name}
+          </p>
+          <p>
+            <span>Location:</span> {job.address.city}
+          </p>
+        </SingleJobContainer>
+      ))}
     </JobListContainer>
   );
 }
