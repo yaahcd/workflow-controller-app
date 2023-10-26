@@ -11,6 +11,7 @@ width: 65vw;
 position: relative;
 border: 1px solid #ADB5BD;
 border-radius: 5px;
+padding-bottom: 20px;
 
 h3 {
     font-family: 'Kite One';

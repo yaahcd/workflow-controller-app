@@ -6,9 +6,25 @@ import { useNavigate } from "react-router-dom";
 import { employees } from "../../../employeeList.json";
 import SearchBox from "../searchBox/SearchBox";
 import Button, { BUTTON_TYPE_CLASSES } from "../button/Button";
+import { useEffect, useState } from "react";
 
 function EmployeesList() {
   const navigate = useNavigate();
+  const [searchField, setSearchField] = useState("");
+  const [filteredEmployees, setFilteredEmployees] = useState(employees);
+
+  useEffect(() => {
+    const newFilteredEmployees = employees.filter((employee) => {
+      return employee.name.toLowerCase().includes(searchField);
+    });
+
+    setFilteredEmployees(newFilteredEmployees);
+  }, [employees, searchField]);
+
+  const onSearchChange = (e)=> {
+    const searchFieldString = e.target.value.toLowerCase();
+    setSearchField(searchFieldString);
+  };
 
   return (
     <EmployeesListContainer>
@@ -18,9 +34,9 @@ function EmployeesList() {
       <h3>List of Employees</h3>
       <SearchBox
         placeholder={"search for employee"}
-        onChangeHandler={() => {}}
+        onChangeHandler={onSearchChange}
       />
-      {employees.map((employee, index) => (
+      {filteredEmployees.map((employee, index) => (
         <p key={index} onClick={() => navigate(`${employee.id}`)}>
           {employee.name}
         </p>
