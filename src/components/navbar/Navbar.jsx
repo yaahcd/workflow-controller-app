@@ -13,7 +13,7 @@ function Navbar() {
         <LogoContainer></LogoContainer>
         <NavLinks>
           <NavLink to="employees">Employees</NavLink>
-          <NavLink to="">Jobs</NavLink>
+          <NavLink to="jobs">Jobs</NavLink>
           <NavLink to="">Map</NavLink>
           <NavLink to="">Sign Out</NavLink>
         </NavLinks>

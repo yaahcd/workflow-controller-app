@@ -5,6 +5,7 @@ import Navbar from './components/navbar/Navbar'
 import EmployeesList from "./components/employeesList/EmployeesList"
 import SingleEmployee from "./components/singleEmployee/SingleEmployee"
 import './App.css'
+import JobList from "./components/jobList/JobList"
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
         <Route index element={<HomePage />}/>
         <Route path="employees" element={<EmployeesList />}/>
         <Route path="employees/:employee" element={<SingleEmployee />}/>
+        <Route path="jobs" element={<JobList/>}/>
       </Route>
     </Routes>
   )
