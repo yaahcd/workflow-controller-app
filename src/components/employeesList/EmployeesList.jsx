@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import SearchBox from "../searchBox/SearchBox";
-import Button, { BUTTON_TYPE_CLASSES } from "../button/Button";
 import {
   ButtonContainer,
+  EmployeeListButton,
   EmployeesListContainer,
   SingleEmployeeContainer,
 } from "./employeesList.styles";
@@ -29,9 +29,7 @@ function EmployeesList() {
 
   return (
     <EmployeesListContainer>
-      <ButtonContainer>
-        <Button buttonType={BUTTON_TYPE_CLASSES.add}>Add employee</Button>
-      </ButtonContainer>
+      <section>
       <h3>List of Employees</h3>
       <SearchBox
         placeholder={"search for employee"}
@@ -44,6 +42,11 @@ function EmployeesList() {
         </p>
       </SingleEmployeeContainer>
       ))}
+      </section>
+      <ButtonContainer>
+        <EmployeeListButton>Add employee</EmployeeListButton>
+        <EmployeeListButton>Assign employee</EmployeeListButton>
+      </ButtonContainer>
     </EmployeesListContainer>
   );
 }
