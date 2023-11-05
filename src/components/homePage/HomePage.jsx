@@ -1,10 +1,16 @@
-import { HomePageContainer } from "./homePage.styles"
+import { HomePageButton, HomepageButtonsContainer, HomePageContainer, HomePageHeader } from "./homePage.styles"
 
 
 function HomePage() {
   return (
     <HomePageContainer>
-      <h1>HELLO</h1>
+      <HomePageHeader>Welcome back! What would you like to do today?</HomePageHeader>
+      <HomepageButtonsContainer>
+      <HomePageButton>Find employees</HomePageButton>
+      <HomePageButton>Find sites</HomePageButton>
+      <HomePageButton>See map</HomePageButton>
+      <HomePageButton>Check finances</HomePageButton>
+      </HomepageButtonsContainer>
     </HomePageContainer>
   )
 }
