@@ -1,6 +1,5 @@
 import { Outlet } from "react-router-dom";
 import {
-  LogoContainer,
   NavLinks,
   NavbarContainer,
   NavLink,
@@ -10,8 +9,8 @@ function Navbar() {
   return (
     <>
       <NavbarContainer>
-        <LogoContainer></LogoContainer>
         <NavLinks>
+          <NavLink to="/home">Home</NavLink>
           <NavLink to="employees">Employees</NavLink>
           <NavLink to="jobs">Jobs</NavLink>
           <NavLink to="">Map</NavLink>
