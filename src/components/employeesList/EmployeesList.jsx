@@ -5,6 +5,7 @@ import Button, { BUTTON_TYPE_CLASSES } from "../button/Button";
 import {
   ButtonContainer,
   EmployeesListContainer,
+  SingleEmployeeContainer,
 } from "./employeesList.styles";
 import { employees } from "../../../employeeList.json";
 
@@ -37,9 +38,11 @@ function EmployeesList() {
         onChangeHandler={onSearchChange}
       />
       {filteredEmployees.map((employee, index) => (
+      <SingleEmployeeContainer>
         <p key={index} onClick={() => navigate(`${employee.id}`)}>
           {employee.name}
         </p>
+      </SingleEmployeeContainer>
       ))}
     </EmployeesListContainer>
   );

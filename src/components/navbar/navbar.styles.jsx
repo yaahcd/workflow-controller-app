@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const NavbarContainer = styled.div`
-  height: 70px;
+  height: 80px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -21,7 +21,7 @@ export const NavLinks = styled.div`
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   margin: 0 80px;
 `;
 
