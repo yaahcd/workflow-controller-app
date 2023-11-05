@@ -6,7 +6,7 @@ function HomePage() {
     <HomePageContainer>
       <HomePageHeader>Welcome back! What would you like to do today?</HomePageHeader>
       <HomepageButtonsContainer>
-      <HomePageButton>Find employees</HomePageButton>
+      <HomePageButton to="employees">Find employees</HomePageButton>
       <HomePageButton>Find sites</HomePageButton>
       <HomePageButton>See map</HomePageButton>
       <HomePageButton>Check finances</HomePageButton>

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const HomePageContainer = styled.div`
 display: flex;
@@ -27,7 +28,7 @@ text-align: center;
 margin: auto;
 `
 
-export const HomePageButton = styled.button`
+export const HomePageButton = styled(Link)`
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,7 +42,7 @@ export const HomePageButton = styled.button`
     font-size: 20px;
     text-shadow: 1px 0px 1px rgba(128, 0, 0, 1);
     box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
-    height: 90px;
+    height: 80px;
     width: 80vw;
     cursor: pointer;
     transition: .5s;
